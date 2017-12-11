@@ -10,7 +10,7 @@ describe "User can update a job" do
     expect(page).to have_content(job.title)
     expect(page).to have_content(job.level_of_interest)
 
-    click_on "Edit Job"
+    click_on "Edit this job"
 
     expect(current_path).to eql(edit_company_job_path(company, job))
     expect(page).to have_content("Edit Job ##{job.id}")

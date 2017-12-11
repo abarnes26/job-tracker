@@ -25,11 +25,14 @@ class JobsController < ApplicationController
   end
 
   def edit
-    # implement on your own!
+    @job = Job.find(params[:id])
   end
 
   def update
-    # implement on your own!
+    @job = Job.find(params[:id])
+    @job.update(job_params)
+
+    redirect_to company_job_path(@job.company, @job)
   end
 
   def destroy

@@ -24,9 +24,9 @@ The rubric below describes additional functionality that you will need to add to
 
 ### Jobs
 
-[] A user can update a job
+[X] A user can update a job
 
-[] A user can delete a job
+[X] A user can delete a job
 
 ### Categories
 
@@ -67,9 +67,9 @@ The rubric below describes additional functionality that you will need to add to
 [] The user can visit `/dashboard` to see
 
     [] A count of jobs by `level_of_interest`
-    
+
     [] The top three companies ranked by average level of interest along with their respective average level of interest.
-    
+
     [] A count of jobs by `location` with a link to visit a page with jobs only in that location. The url should be `/jobs?location=Denver`.
 
 [] The user can visit `/jobs?sort=interest` to view a list of the jobs sorted by `level_of_interest`.

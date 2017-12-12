@@ -2,8 +2,9 @@ require 'rails_helper'
 
 describe "User can update a job" do
   scenario "a user can make changes to an existing job" do
+    category = Category.new(title: "Tech")
     company = Company.create!(name: "ESPN")
-    job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver")
+    job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver", category: category)
 
     visit company_job_path(company, job)
 

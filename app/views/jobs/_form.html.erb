@@ -11,5 +11,8 @@
   <%= f.label :city %>
   <%= f.text_field :city %>
 
+  <%= f.label :category_id %>
+  <%= f.collection_select :category_id, Category.all, :id, :title %>
+
   <%= f.submit %>
 <% end %>

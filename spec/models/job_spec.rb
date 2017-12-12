@@ -21,8 +21,9 @@ describe Job do
 
     context "valid attributes" do
       it "is valid with a title, level of interest, and company" do
+        category = Category.new(title: "Tech")
         company = Company.new(name: "Turing")
-        job = Job.new(title: "Developer", level_of_interest: 40, city: "Denver", company: company)
+        job = Job.new(title: "Developer", level_of_interest: 40, city: "Denver", company: company, category: category)
         expect(job).to be_valid
       end
     end

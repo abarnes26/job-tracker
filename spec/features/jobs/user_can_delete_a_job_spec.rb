@@ -2,9 +2,10 @@ require 'rails_helper'
 
 describe "User can delete a job" do
   scenario "a user can remove a job from the database" do
+    category = Category.new(title: "Tech")
     company = Company.create!(name: "ESPN")
-    job_1 = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver")
-    job_2 = company.jobs.create!(title: "Janitor", level_of_interest: 5, city: "Golden")
+    job_1 = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver", category: category)
+    job_2 = company.jobs.create!(title: "Janitor", level_of_interest: 5, city: "Golden", category: category)
 
     visit company_jobs_path(company)
 

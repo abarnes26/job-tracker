@@ -1,4 +1,4 @@
-All Jo for <strong><%= @company.name %></strong>
+<!-- All Jobs for <strong><%= @company.name %></strong>
 
 <% @company.jobs.each do |job| %>
 <ul><%= link_to "#{job.title}", company_job_path(company, job) %></ul>
@@ -6,15 +6,15 @@ All Jo for <strong><%= @company.name %></strong>
 
 <h4> Company Contacts </h4>
 <% @company.contacts.each do |contact| %>
- Name: <%= contact.name %>
+ Name: <%= contact.full_name %>
  Position: <%= contact.position %>
  Email: <% = contact.email %><br>
  <%end%>
 
  <h5> Add New Contact </h5>
  <%= form_for [@company, @company.contact] do |f| %>
-   <%= f.label :name %>
-   <%= f.text_field :name %>
+   <%= f.label :full_name %>
+   <%= f.text_field :full_name %>
 
    <%= f.label :position %>
    <%= f.text_field :position %>
@@ -23,4 +23,4 @@ All Jo for <strong><%= @company.name %></strong>
    <%= f.number_field :email %>
 
    <%= f.submit %>
- <% end %>
+ <% end %> -->

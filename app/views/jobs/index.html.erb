@@ -9,6 +9,7 @@ All Jobs for <strong><%= @company.name %></strong>
  Name: <%= contact.full_name %><br>
  Position: <%= contact.position %><br>
  Email: <%= contact.email %><br>
+ <%= link_to "delete", company_contact_path(@company, contact), method: :delete %>
  <%end%>
 
  <h5> Add New Contact </h5>
@@ -20,7 +21,7 @@ All Jobs for <strong><%= @company.name %></strong>
    <%= f.text_field :position %><br>
 
    <%= f.label :email %>
-   <%= f.number_field :email %><br>
+   <%= f.text_field :email %><br>
 
    <%= f.submit %>
  <% end %>

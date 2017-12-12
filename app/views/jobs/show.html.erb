@@ -10,14 +10,15 @@ Level of Interest: <%= @job.level_of_interest %>
 City: <%= @job.city %>
 <br>
 
-Company: <%= link_to @job.company.name, company_path(@job.company) %>
+Company: <%= link_to @job.company.name, company_path(@job.company) %><br>
 
 <%= link_to "Edit this job", edit_company_job_path(@job.company, @job) %><br>
 <%= link_to "Delete this job", company_job_path(@job.company, @job), method: :delete %><br>
 
-<h5> Comments </h5>
+<h4> Comments </h4>
 <% @job.comments.reverse.each do |comment| %>
-<p><%= comment.content %></p><br>
+<p> <%= comment.content %>
+<%= link_to "delete", company_job_comment_path(@job.company, @job, comment), method: :delete %></p><br>
   <% end %>
 
 <h4> Add a new comment </h4>

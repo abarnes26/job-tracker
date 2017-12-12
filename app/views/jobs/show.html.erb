@@ -16,14 +16,13 @@ Company: <%= link_to @job.company.name, company_path(@job.company) %>
 <%= link_to "Delete this job", company_job_path(@job.company, @job), method: :delete %><br>
 
 <h5> Comments </h5>
-<% @job.comments.each do |comment| %>
+<% @job.comments.reverse.each do |comment| %>
 <p><%= comment.content %></p><br>
   <% end %>
 
-<h4> Add a new comments </h4>
+<h4> Add a new comment </h4>
 
 <%= form_for [@job.company, @job, @comment] do |f| %>
-  <!-- <%= f.label :content %> -->
   <%= f.text_area :content %>
 
   <%= f.submit %>

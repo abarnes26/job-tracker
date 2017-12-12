@@ -1,0 +1,9 @@
+<h3>Edit <%=@category.title %> </h3>
+
+<%= form_for @category do |f| %>
+   <%= f.label :title %>
+   <%= f.text_field :title %>
+
+   <%= f.submit %>
+
+   <% end %>

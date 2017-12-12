@@ -1,3 +1,12 @@
 <h1> Category </h1>
 
 <%= @category.title %>
+
+ <% @category.jobs.each do |job| %>
+<p> <%= link_to job.title, "/companies/#{job.company.id}/jobs/#{job.id}" %> for <%= link_to job.company.name, company_path(job.company) %></p>
+  <% end %>
+
+<%= link_to "Edit Category", edit_category_path(@category) %>
+<%= link_to "Delete Category", category_path(@category), method: :delete%>
+
+<%= link_to "<< Back to index", categories_path(@category) %>

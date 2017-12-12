@@ -10,7 +10,21 @@ Level of Interest: <%= @job.level_of_interest %>
 City: <%= @job.city %>
 <br>
 
+Company: <%= link_to @job.company.name, company_path(@job.company) %>
+
 <%= link_to "Edit this job", edit_company_job_path(@job.company, @job) %><br>
 <%= link_to "Delete this job", company_job_path(@job.company, @job), method: :delete %><br>
 
-Company: <%= link_to @job.company.name, company_path(@job.company) %>
+<h5> Comments </h5>
+<% @job.comments.each do |comment| %>
+<p><%= comment.content %></p><br>
+  <% end %>
+
+<h4> Add a new comments </h4>
+
+<%= form_for [@job.company, @job, @comment] do |f| %>
+  <!-- <%= f.label :content %> -->
+  <%= f.text_area :content %>
+
+  <%= f.submit %>
+<% end %>

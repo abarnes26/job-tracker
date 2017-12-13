@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :category do
-    sequence(:title) {|n| "DirectorName#{n}"}
+    sequence(:title) {|n| "CategoryName#{n}"}
   end
 
-  factory :admin, class: :director do
-    name "AdminDirector"
+  factory :admin, class: :category do
+    name "AdminCategory"
   end
 end
 

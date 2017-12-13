@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Nav Bar" do
+describe "Using the Nav Bar" do
   scenario "a user can jump to all companies from categories index" do
     visit categories_path
 

@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :job do
-    title "FakeJob1"
-    description "FakeDescription"
-    level_of_interest "50"
-    city "FakeCity"
-    company
+    title "job1"
+    description "description1"
+    city "City1"
+    level_of_interest 50
     category
+    company
   end
 end

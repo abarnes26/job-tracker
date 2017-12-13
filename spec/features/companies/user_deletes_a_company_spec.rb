@@ -9,6 +9,6 @@ describe "User deletes existing company" do
       click_link "Delete"
     end
 
-    expect(page).to have_content("FakeCompany was successfully deleted!")
+    expect(page).to have_content("#{company.name} was successfully deleted!")
   end
 end

@@ -17,7 +17,7 @@ describe "Nav Bar" do
     expect(current_path).to eql(companies_path)
   end
 
-  scenario "a user can jump to companies from companies" do
+  scenario "a user can jump to companies from dashboard" do
     visit dashboard_index_path
 
     click_link "Companies"

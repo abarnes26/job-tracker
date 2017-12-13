@@ -1,26 +1,36 @@
-<!-- All Jobs for <strong><%= @company.name %></strong>
+<div>
+  <%= link_to "Companies", companies_path %>
+  <%= link_to "All Jobs", jobs_path %>
+  <%= link_to "Categories", categories_path %>
+</div><br>
 
-<% @company.jobs.each do |job| %>
-<ul><%= link_to "#{job.title}", company_job_path(company, job) %></ul>
-<% end %>
+
+All Jobs for <strong><%= @company.name %></strong>
+
+<% @jobs.each do |job| %>
+<ul><%= link_to "#{job.title}", company_job_path(@company, job) %></ul>
+<% end %><br>
+
+<br><%= link_to "Create a New Job Here", new_company_job_path(@company) %>
 
 <h4> Company Contacts </h4>
 <% @company.contacts.each do |contact| %>
- Name: <%= contact.full_name %>
- Position: <%= contact.position %>
- Email: <% = contact.email %><br>
+ Name: <%= contact.full_name %><br>
+ Position: <%= contact.position %><br>
+ Email: <%= contact.email %><br>
+ <%= link_to "delete", company_contact_path(@company, contact), method: :delete %>
  <%end%>
 
  <h5> Add New Contact </h5>
- <%= form_for [@company, @company.contact] do |f| %>
+ <%= form_for [@company, @contacts] do |f| %>
    <%= f.label :full_name %>
-   <%= f.text_field :full_name %>
+   <%= f.text_field :full_name %><br>
 
    <%= f.label :position %>
-   <%= f.text_field :position %>
+   <%= f.text_field :position %><br>
 
    <%= f.label :email %>
-   <%= f.number_field :email %>
+   <%= f.text_field :email %><br>
 
    <%= f.submit %>
- <% end %> -->
+ <% end %>

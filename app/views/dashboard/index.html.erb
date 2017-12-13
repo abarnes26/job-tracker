@@ -1,0 +1,17 @@
+<h3> Job Count by Interest </h3>
+
+<% @job_by_interest.sort.reverse.each do |job_pair| %>
+Interest: <%= job_pair.first%><br>
+Job Count: <%= job_pair.last%><br><br>
+<% end %>
+
+<h3> Top 3 Jobs (by interest) </h3>
+<% @top_3_jobs.each do |job| %>
+<%= job.title %> <%= job.company.name %> <%= job.level_of_interest %><br>
+<% end %>
+
+<h3> Jobs Grouped by City </h3>
+<% @job_by_location.each do |job| %>
+City: <%= link_to job.first, "/jobs?location=#{job.first}" %><br>
+Job Count: <%= job.last %><br><br>
+<% end %>

@@ -12,7 +12,7 @@ All Jobs for <strong><%= @company.name %></strong>
  Name: <%= contact.full_name %><br>
  Position: <%= contact.position %><br>
  Email: <%= contact.email %><br>
- <%= link_to "delete", company_contact_path(@company, contact), method: :delete %>
+ <%= link_to "delete contact", company_contact_path(@company, contact), method: :delete %>
  <%end%>
 
  <h5> Add New Contact </h5>

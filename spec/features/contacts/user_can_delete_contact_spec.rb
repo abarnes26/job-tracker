@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "User creates a new contact" do
-  scenario "a user can create a contact" do
+describe "User deletes a contact" do
+  scenario "a user can delete a contact" do
     company = create(:company)
     visit company_path(company)
 
@@ -11,9 +11,13 @@ describe "User creates a new contact" do
 
     click_button "Create Contact"
 
-    expect(current_path).to eq("/companies/#{Company.last.id}")
     expect(page).to have_content("ContactName")
-    expect(page).to have_content("position1")
     expect(Contact.all.count).to eql(1)
+
+    click_link "delete contact"
+
+    expect(current_path).to eql(company_path(company))
+    expect(page).to have_no_content("ContactName")
+    expect(Contact.all.count).to eql(0)
   end
 end

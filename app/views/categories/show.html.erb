@@ -4,9 +4,9 @@
 
  <% @category.jobs.each do |job| %>
 <p> <%= link_to job.title, "/companies/#{job.company.id}/jobs/#{job.id}" %> for <%= link_to job.company.name, company_path(job.company) %></p>
-  <% end %>
+  <% end %><br>
 
-<%= link_to "Edit Category", edit_category_path(@category) %>
-<%= link_to "Delete Category", category_path(@category), method: :delete%>
+<br><%= link_to "Edit Category", edit_category_path(@category) %>
+<br><%= link_to "Delete Category", category_path(@category), method: :delete%>
 
-<%= link_to "<< Back to index", categories_path(@category) %>
+<br><%= link_to "<< Back to index", categories_path(@category) %>

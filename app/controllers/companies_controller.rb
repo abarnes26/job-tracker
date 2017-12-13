@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+
   def index
     @companies = Company.all
   end
@@ -20,7 +21,7 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find(params[:id])
     @jobs = @company.jobs
-    @contacts = Contact.new    
+    @contacts = Contact.new
   end
 
   def edit

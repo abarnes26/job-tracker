@@ -7,7 +7,7 @@ Job Count: <%= job_pair.last%><br><br>
 
 <h3> Top 3 Jobs (by interest) </h3>
 <% @top_3_jobs.each do |job| %>
-<%= job.title %> <%= job.company.name %> <%= job.level_of_interest %><br>
+<%= job.title %> at <%= job.company.name %><br>
 <% end %>
 
 <h3> Jobs Grouped by City </h3>

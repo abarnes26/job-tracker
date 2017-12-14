@@ -13,3 +13,146 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   background-image: url(https://nebula.wsimg.com/57cb4c1f9b9b70ca3f9ca53c7ffcc159?AccessKeyId=98A9226D5D55FF8784E2&disposition=0&alloworigin=1)
+ }
+
+ h2 {
+  color: Black;
+  font-family: Helvetica;
+  background-color: #grey;
+  border-radius: 10px;
+  border: 1px solid;
+  text-align: center;
+  z-index: 2;
+ }
+
+ #nav_bar {
+   position: fixed;
+   width: 100%;
+   display: flex;
+   background-color: #0B2027;
+   z-index: 2;
+ }
+
+ #not_nav_bar {
+   position: relative;
+   top: 30px;
+   z-index: 1;
+ }
+
+ .nav_bar_links {
+   flex-flow: row;
+   font-weight: bold;
+   text-decoration: none;
+   color: #A7BED3;
+   padding: 15px;
+   opacity: 100%;
+ }
+
+ .delete_button {
+   background-color: #9E788F;
+   border-radius: 5px;
+   text-decoration: none;
+   padding: 5px;
+   color: grey;
+   margin: 3px;
+   border: solid black 1px;
+ }
+
+ .edit_button {
+   background-color: #A7BED3;
+   border-radius: 5px;
+   text-decoration: none;
+   padding: 5px;
+   color: black;
+   margin: 3px;
+   border: solid black 1px;
+ }
+
+ .edit_delete_pairs {
+   display: flex;
+   flex-flow: row;
+   padding: 7px;
+ }
+
+ .category {
+   font-size: 24px;
+   text-decoration: none;
+   font-family: Helvetica;
+   color: grey;
+   background: white;
+   text-decoration: none;
+   border: 1px solid black;
+   border-radius: 5px;
+   padding: 3px;
+   margin: 10px;
+ }
+
+  .job_listing {
+    display: grid;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: Helvetica;
+    color: grey;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+ .category_set {
+   display: block;
+
+ }
+
+ .create_new {
+   background-color: white;
+   border-radius: 5px;
+   text-decoration: none;
+   font-weight: bolder;
+   padding: 5px;
+   color: black;
+   margin: 3px;
+   border: solid black 1px;
+ }
+
+ .job_title {
+   color: black;
+   text-decoration: none;
+   border: 1px solid;
+   padding: 4px;
+   font-weight: bold;
+   font-family: Helvetica;
+   font-size: 26px;
+ }
+
+ .company_title {
+   border: 1px solid;
+   text-decoration: none;
+   background-color: white;
+   color: black;
+   font-weight: bold;
+   font-family: sans-serif;
+   margin-left: 14px;
+   padding: 3px;
+ }
+
+ .dashboard {
+   display: flex;
+   flex-direction: row;
+ }
+
+ .dashboard_item, .job_showing, .category_listing, .contact{
+   margin: 10px;
+   border: 3px solid black;
+   background-color: white;
+   padding: 10px;
+   font-family: Helvetica;
+ }
+
+ .comments {
+   margin: 10px;
+   border: 3px solid black;
+   background-color: #EBD4CB;
+   padding: 10px;
+ }

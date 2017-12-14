@@ -1,9 +1,12 @@
-<h3> All Categories </h3>
+<h2> All Categories </h2>
+  <div class = "category_set">
+    <% @categories.each do |category| %>
+    <%= link_to category.title, category_path(category), class: "category"%><br>
+    <div class = "edit_delete_pairs">
+      <%= link_to "Edit", edit_category_path(category), class: "edit_button" %><br><br>
+      <%= link_to "Delete", category_path(category), method: :delete, class: "delete_button" %><br><br>
+    </div><br>
+    <% end %>
+  </div>
 
-  <% @categories.each do |category| %>
-  <%= link_to category.title, category_path(category) %><br>
-  <%= link_to "Edit", edit_category_path(category) %><br>
-  <%= link_to "Delete", category_path(category), method: :delete %><br><br>
-  <% end %>
-
-<%= link_to "Create a new category", new_category_path %>
+<%= link_to "Create a new category", new_category_path, class: "create_new" %>

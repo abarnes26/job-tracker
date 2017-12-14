@@ -1,5 +1,7 @@
-All Jobs for All Companies
+<h2>All Jobs for All Companies</h2>
 
+<div class="job_listing">
 <% @jobs.each do |job| %>
-<ul><%= link_to "#{job.title}", company_job_path(job.company, job) %> for <%= link_to job.company.name, company_path(job.company)%> in <%= job.city %></ul>
+<ul><%= link_to "#{job.title}", company_job_path(job.company, job), class: "job_title"%> for <%= link_to job.company.name, company_path(job.company), class: "job_title"%> in <%= job.city %></ul>
 <% end %>
+</div>

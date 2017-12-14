@@ -1,3 +1,6 @@
+<h2> Info for <%= @job.title %> </h2>
+
+<div class="job_showing">
 Title: <%= @job.title %> <br>
 
 Description: <%= @job.description %>
@@ -11,17 +14,22 @@ City: <%= @job.city %>
 
 Company: <%= link_to @job.company.name, company_path(@job.company) %><br>
 
-<%= link_to "Edit this job", edit_company_job_path(@job.company, @job) %><br>
-<%= link_to "Delete this job", company_job_path(@job.company, @job), method: :delete %><br>
+</div>
+
+<div class = "edit_delete_pairs">
+  <%= link_to "Edit this job", edit_company_job_path(@job.company, @job), class: "edit_button" %><br>
+  <%= link_to "Delete this job", company_job_path(@job.company, @job), method: :delete, class: "delete_button" %><br>
+</div>
 
 <h4> Comments </h4>
 <% @job.comments.reverse.each do |comment| %>
+<div class="comments">
 <p> <%= comment.content %>
-<%= link_to "delete", company_job_comment_path(@job.company, @job, comment), method: :delete %></p><br>
+<%= link_to "delete", company_job_comment_path(@job.company, @job, comment), method: :delete, class: "delete_button"  %></p><br>
+</div>
   <% end %>
 
 <h4> Add a new comment </h4>
-
 <%= form_for [@job.company, @job, @comment] do |f| %>
   <%= f.text_area :content %>
 

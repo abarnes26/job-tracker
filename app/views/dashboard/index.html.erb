@@ -1,17 +1,27 @@
-<h3> Job Count by Interest </h3>
+<h2> Dashboard </h2>
 
+<div class="dashboard">
+<div class="dashboard_item">
+<h3> Job Count by Interest </h3>
 <% @job_by_interest.sort.reverse.each do |job_pair| %>
 Interest: <%= job_pair.first%><br>
 Job Count: <%= job_pair.last%><br><br>
 <% end %>
+</div>
 
+<div class="dashboard_item">
 <h3> Top 3 Jobs (by interest) </h3>
 <% @top_3_jobs.each do |job| %>
 <%= job.title %> at <%= job.company.name %><br>
 <% end %>
+</div>
 
+<div class="dashboard_item">
 <h3> Jobs Grouped by City </h3>
 <% @job_by_location.each do |job| %>
 City: <%= link_to job.first, "/jobs?location=#{job.first}" %><br>
 Job Count: <%= job.last %><br><br>
 <% end %>
+</div>
+
+</div>

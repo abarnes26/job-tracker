@@ -76,61 +76,61 @@ The rubric below describes additional functionality that you will need to add to
 
 ### Databases
 
-[] The database has appropriate tables and columns to create relationships between tables
+[X] The database has appropriate tables and columns to create relationships between tables
 
-[] Table and column names follow convention
+[X] Table and column names follow convention
 
 ### Routes
 
 [] Routes are defined for all functionality and not any additional functionality
 
-[] All routes conform to RESTful conventions for resources
+[X] All routes conform to RESTful conventions for resources
 
-[] Routes to pages that are not specifically for resources stored in the database are not named in a way that an experienced developer would find surprising
+[X] Routes to pages that are not specifically for resources stored in the database are not named in a way that an experienced developer would find surprising
 
 ### Controllers
 
-[] The developer has moved logic out of the controllers and into the models/POROs where appropriate.
+[X] The developer has moved logic out of the controllers and into the models/POROs where appropriate.
 
-[] The developer uses strong params in a private method
+[X] The developer uses strong params in a private method
 
-[] Instance variables being passed to views are appropriately named and limited in number
+[X] Instance variables being passed to views are appropriately named and limited in number
 
 ### ActiveRecord
 
-[] ActiveRecord methods are used in models to supply all appropriate functionality
+[X] ActiveRecord methods are used in models to supply all appropriate functionality
 
-[] Methods exist on the appropriate model
+[X] Methods exist on the appropriate model
 
-[] Developers are not referencing other classes or `self` in models unnecessarily
+[X] Developers are not referencing other classes or `self` in models unnecessarily
 
-[] Ruby enumerables are not used where ActiveRecord methods could provide the necessary functionality
+[X] Ruby enumerables are not used where ActiveRecord methods could provide the necessary functionality
 
-[] Developer can explain the ActiveRecord methods they used and the relationships between ActiveRecord models
+[X] Developer can explain the ActiveRecord methods they used and the relationships between ActiveRecord models
 
 ### Views
 
-[] Logic has been removed from views and controllers to the full degree possible
+[X] Logic has been removed from views and controllers to the full degree possible
 
-[] Developer ha minimized the number of variables passed to the view
+[X] Developer ha minimized the number of variables passed to the view
 
-[] Developer can articulately explain their strategies for extracting this logic
+[X] Developer can articulately explain their strategies for extracting this logic
 
 [] Developer uses partials to reduce duplication of code in the view layer
 
 ### User Experience
 
-[] The application has been styled and the user can easily navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
+[X] The application has been styled and the user can easily navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
 
 ### Testing
 
-[] Project has a running test suite
+[X] Project has a running test suite
 
-[] Test suite includes robust feature tests
+[X] Test suite includes robust feature tests
 
-[] Test suite includes tests for validations
+[X] Test suite includes tests for validations
 
-[] Test suite includes tests for methods that they have created on the models
+[X] Test suite includes tests for methods that they have created on the models
 
 ## Extensions:
 

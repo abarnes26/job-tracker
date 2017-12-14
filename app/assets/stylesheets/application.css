@@ -28,6 +28,12 @@
   z-index: 2;
  }
 
+ h4 {
+   font-family: Helvetica;
+   padding-left: 10px;
+
+  }
+
  #nav_bar {
    position: fixed;
    width: 100%;
@@ -56,7 +62,7 @@
    border-radius: 5px;
    text-decoration: none;
    padding: 5px;
-   color: grey;
+   color: black;
    margin: 3px;
    border: solid black 1px;
  }
@@ -81,7 +87,7 @@
    font-size: 24px;
    text-decoration: none;
    font-family: Helvetica;
-   color: grey;
+   color: black;
    background: white;
    text-decoration: none;
    border: 1px solid black;
@@ -119,7 +125,7 @@
  .job_title {
    color: black;
    text-decoration: none;
-   border: 1px solid;
+   border: 3px solid;
    padding: 4px;
    font-weight: bold;
    font-family: Helvetica;
@@ -151,8 +157,10 @@
  }
 
  .comments {
+   display: inline-flex;
    margin: 10px;
    border: 3px solid black;
-   background-color: #EBD4CB;
    padding: 10px;
+   font-family: Helvetica;
+   font-size: 14px;
  }

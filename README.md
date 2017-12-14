@@ -116,7 +116,7 @@ The rubric below describes additional functionality that you will need to add to
 
 [X] Developer can articulately explain their strategies for extracting this logic
 
-[] Developer uses partials to reduce duplication of code in the view layer
+[X] Developer uses partials to reduce duplication of code in the view layer
 
 ### User Experience
 

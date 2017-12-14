@@ -1,5 +1,5 @@
 class Company < ApplicationRecord
   validates :name, presence: true, uniqueness: true
-  has_many :jobs
-  has_many :contacts
+  has_many :jobs, dependent: :destroy
+  has_many :contacts, dependent: :destroy
 end
